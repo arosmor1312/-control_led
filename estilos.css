@@ -1,0 +1,54 @@
+/* Ajustes generales de la página y del contenido principal. */
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif; background: #e8eef5; color: #1e293b;
+  text-align: center; margin: 0; padding: 24px 16px;
+}
+.contenedor {
+  max-width: 900px; margin: 0 auto; background: white; padding: 30px;
+  border-radius: 18px; box-shadow: 0 8px 25px rgba(15,23,42,.08);
+}
+/* Estilos de títulos y textos. */
+.etiqueta { color: #2563eb; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+h1 { color: #1d4ed8; margin-bottom: 8px; }
+.subtitulo, .nota { color: #64748b; }
+/* Diseño de los bloques y apartados de la página. */
+.conexion { background: #f1f5f9; padding: 18px; border-radius: 12px; margin: 25px 0; }
+.panel { padding: 20px 0; border-top: 1px solid #e2e8f0; }
+.panel h2 { color: #334155; }
+.led-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.led-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 10px; }
+.led-card h3 { margin-bottom: 5px; }
+.led-card p { color: #64748b; margin-top: 5px; }
+/* Apariencia de los indicadores luminosos y sus colores. */
+.bombilla { width: 48px; height: 48px; border-radius: 50%; margin: 12px auto 18px; opacity: .25; border: 3px solid rgba(15,23,42,.12); }
+.amarillo { background: #facc15; }
+.verde { background: #22c55e; }
+.azul { background: #3b82f6; }
+.bombilla.encendido { opacity: 1; box-shadow: 0 0 24px currentColor; }
+.amarillo.encendido { color: #eab308; }
+.verde.encendido { color: #16a34a; }
+.azul.encendido { color: #2563eb; }
+/* Estilos comunes y colores de los botones. */
+button { padding: 12px 16px; border: 0; border-radius: 8px; color: white; font-size: 14px; cursor: pointer; margin: 4px; }
+button:disabled { background: #94a3b8; cursor: not-allowed; }
+.principal { background: #2563eb; }
+.encender { background: #16a34a; }
+.apagar { background: #dc2626; }
+.secundario { background: #7c3aed; }
+.botones { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; }
+.botones-grandes button { min-width: 190px; }
+/* Estilo del control deslizante y textos de estado. */
+input[type="range"] { width: min(100%,420px); accent-color: #2563eb; display: block; margin: 14px auto; }
+.estado-led { font-weight: bold; color: #334155; margin-top: 18px; }
+.contador { background: #eff6ff; border-radius: 14px; padding: 20px; margin-top: 10px; }
+.contador strong { display: block; color: #1d4ed8; font-size: 42px; }
+#mensaje { margin-top: 22px; font-weight: bold; color: #475569; }
+/* Apariencia del pie de página. */
+footer { max-width: 900px; margin: 20px auto 0; padding: 22px; background: #1e293b; color: white; border-radius: 14px; }
+.copyright { color: #cbd5e1; font-size: 12px; }
+/* Adaptación del diseño para pantallas pequeñas. */
+@media (max-width: 650px) {
+  .contenedor { padding: 20px 12px; }
+  .led-grid { grid-template-columns: 1fr; }
+}
